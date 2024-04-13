@@ -24,8 +24,8 @@ const WhyChoose = () => {
     <>
     <p className="text-primary mt-3 text-2xl font-medium">Why Choose Us</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5">
-      {whyChoose.length==0&&[0,1,2,3,4].map((v,i)=><div key={i} className="skeleton w-full h-[200px]"></div>)}
-        {loading?[0,1,2,3,4,5,6,7,7,7,8].map((v,i)=><div key={i} className="skeleton w-full h-[200px]"></div>):(whyChoose.map((v,i)=> <WhyChooseAdapter refid={v.refid} newAdapter={false} text={v.text} key={i} reload={getWhyChooses}/>))}
+      {whyChoose.length==0&&[0,1,2,3,4].map(()=><div className="skeleton w-full h-[200px]"></div>)}
+        {loading?[0,1,2,3,4,5,6,7,7,7,8].map(()=><div className="skeleton w-full h-[200px]"></div>):(whyChoose.map((v,i)=> <WhyChooseAdapter refid={v.refid} newAdapter={false} text={v.text} key={i} reload={getWhyChooses}/>))}
         <WhyChooseAdapter refid={new Date().getTime().toString()} newAdapter={true} text="" reload={getWhyChooses}/>
       </div>
     </>

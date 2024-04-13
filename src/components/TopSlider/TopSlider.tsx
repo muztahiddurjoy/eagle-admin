@@ -113,7 +113,7 @@ const TopSlider = () => {
     <div>
       <p className="text-primary mt-3 text-2xl font-medium">Top Slider</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5">
-        {images.length==0&&[0,1,2,3,4].map((v,i)=><div key={i} className="skeleton w-full h-[200px]"></div>)}
+        {images.length==0&&[0,1,2,3,4].map(()=><div className="skeleton w-full h-[200px]"></div>)}
         {images.map((v, i) => <ImageAdapter reload={getImages} newAdapter={false} image={v.image} refkey={v.refid} onDelete={deleteImage} onUpdate={updateImage} key={i} />)}
         <ImageAdapter uploadImage={uploadImage} reload={getImages} newAdapter={true} image="" refkey={new Date().getTime().toString()} />
       </div>

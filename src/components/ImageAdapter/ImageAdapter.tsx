@@ -24,7 +24,7 @@ const ImageAdapter = ({image,onDelete,onUpdate,refkey,newAdapter,uploadImage}:Im
         </div>
         <div className="flex items-center justify-end mt-3">
         {onDelete&&<button className='mx-2 btn btn-error btn-sm text-white' onClick={()=>onDelete(refkey)}>Delete</button>}
-        {onUpdate&&<button className='btn btn-primary btn-sm text-white' onClick={e=> onUpdate(file,refkey,setloading)} disabled={!file||loading}>{loading&&<span className="loading loading-infinity loading-sm"></span>}Update</button>}
+        {onUpdate&&<button className='btn btn-primary btn-sm text-white' onClick={()=> onUpdate(file,refkey,setloading)} disabled={!file||loading}>{loading&&<span className="loading loading-infinity loading-sm"></span>}Update</button>}
         {(newAdapter&&uploadImage)&&<button className='btn btn-primary btn-sm text-white' onClick={()=>uploadImage(file,setloading)} disabled={!file||loading}>{loading&&<span className="loading loading-infinity loading-sm"></span>}Upload</button>}
         </div>
     </div>
