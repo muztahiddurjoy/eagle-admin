@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Menu from "../Menu/Menu"
 
 const Dashboard = ({children}:React.PropsWithChildren) => {
   return (
@@ -21,21 +22,7 @@ const Dashboard = ({children}:React.PropsWithChildren) => {
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
-    <ul className="menu p-4 w-60 min-h-full bg-base-200 text-base-content [&>*]:my-1">
-      {/* Sidebar content here */}
-      <li>
-        <Link to="/">Basic Info</Link>
-      </li>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/">Basic Info</Link>
-      </li>
-      <li>
-        <Link to="/">Basic Info</Link>
-      </li>
-    </ul>
+    <Menu/>
   
   </div>
         </div>
