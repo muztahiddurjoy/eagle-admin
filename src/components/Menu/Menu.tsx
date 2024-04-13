@@ -11,9 +11,6 @@ const Menu = () => {
         <Link to="/home">Home</Link>
       </li>
       <li>
-        <Link to="/who-are-we">Who Are We</Link>
-      </li>
-      <li>
         <Link to="/about">About</Link>
       </li>
       <li>
