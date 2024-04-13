@@ -32,6 +32,14 @@ const Menu = () => {
         <Link to="/gallery">Gallery</Link>
       </li>
       
+      <li>
+        <Link to="/legal-documents">Legal Documents</Link>
+      </li>
+      
+      <li>
+        <Link to="/certifications">Certifications</Link>
+      </li>
+      
     </ul>
   )
 }

@@ -9,6 +9,8 @@ import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import MeetTheTeam from "./pages/MeetTheTeam";
 import History from "./pages/History";
+import LegalDocuments from "./pages/LegalDocuments";
+import Certifications from "./pages/Certifications";
 
 export const router = createBrowserRouter([
     {
@@ -46,6 +48,14 @@ export const router = createBrowserRouter([
     {
          path:'/history',
          element:<History/>
+    },
+    {
+        path:'/legal-documents',
+        element:<LegalDocuments/>
+    },
+    {
+        path:"/certifications",
+        element:<Certifications/>
     },
     {
         path:"*",
