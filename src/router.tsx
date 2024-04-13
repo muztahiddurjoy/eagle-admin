@@ -11,6 +11,7 @@ import MeetTheTeam from "./pages/MeetTheTeam";
 import History from "./pages/History";
 import LegalDocuments from "./pages/LegalDocuments";
 import Certifications from "./pages/Certifications";
+import Home from "./pages/Home";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
     {
         path:'/',
         element:<Config/>
+    },
+    {
+        path:'/home',
+        element:<Home/>
     },
     {
         path:'/profile',
