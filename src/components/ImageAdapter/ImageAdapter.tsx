@@ -17,7 +17,7 @@ const ImageAdapter = ({image,onDelete,onUpdate,refkey,newAdapter,uploadImage}:Im
   return (
     <div className='border border-base-300 rounded-md p-3'>
         {!newAdapter&&<img src={image} className='w-full rounded-md h-[200px] object-cover' alt=""/>}
-        {newAdapter&&<p className='text-primay text-2xl font-medium'>New Image</p>}
+        {newAdapter&&<p className='text-primay text-2xl font-medium'>New</p>}
         <div className="flex items-center justify-between mt-3">
             <input type="file" onChange={e=> setfile(e.target.files![0])} className="file-input file-input-bordered w-full file-input-sm" />
            
