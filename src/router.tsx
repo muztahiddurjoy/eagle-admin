@@ -6,6 +6,9 @@ import OurProfile from "./pages/OurProfile";
 import WhoAreWe from "./pages/WhoAreWe";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
+import About from "./pages/About";
+import MeetTheTeam from "./pages/MeetTheTeam";
+import History from "./pages/History";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +34,18 @@ export const router = createBrowserRouter([
     {
         path:'/gallery',
         element:<Gallery/>
+    },
+    {
+        path:'/about',
+        element:<About/>
+    },
+    {
+        path:'/meet-the-team',
+        element:<MeetTheTeam/>
+    },
+    {
+         path:'/history',
+         element:<History/>
     },
     {
         path:"*",

@@ -14,6 +14,15 @@ const Menu = () => {
         <Link to="/who-are-we">Who Are We</Link>
       </li>
       <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/meet-the-team">Meet The Team</Link>
+      </li>
+      <li>
+        <Link to="/history">History</Link>
+      </li>
+      <li>
         <Link to="/profile">Company Profile</Link>
       </li>
       <li>
