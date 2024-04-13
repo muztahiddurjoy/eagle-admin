@@ -1,5 +1,6 @@
 import Dashboard from "../components/Dashboard/Dashboard"
 import Affiliation from "../components/Home/Affiliation&License/Affiliation"
+import PartnerCompanies from "../components/Home/PartnerCompanies/PartnerCompanies"
 import TopSlider from "../components/Home/TopSlider/TopSlider"
 import WhyChoose from "../components/Home/WhyChoose/WhyChoose"
 
@@ -18,6 +19,7 @@ const Home = () => {
       <TopSlider/>
       <Affiliation/>
       <WhyChoose/>
+      <PartnerCompanies/>
     </>
    </Dashboard>
   )
