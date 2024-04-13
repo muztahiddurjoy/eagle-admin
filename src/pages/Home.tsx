@@ -1,6 +1,7 @@
 import Dashboard from "../components/Dashboard/Dashboard"
-import TopSlider from "../components/TopSlider/TopSlider"
-import WhyChoose from "../components/WhyChoose/WhyChoose"
+import Affiliation from "../components/Home/Affiliation&License/Affiliation"
+import TopSlider from "../components/Home/TopSlider/TopSlider"
+import WhyChoose from "../components/Home/WhyChoose/WhyChoose"
 
 const Home = () => {
   
@@ -15,6 +16,7 @@ const Home = () => {
       </div>
 
       <TopSlider/>
+      <Affiliation/>
       <WhyChoose/>
     </>
    </Dashboard>

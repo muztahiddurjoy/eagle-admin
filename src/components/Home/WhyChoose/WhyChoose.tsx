@@ -1,7 +1,7 @@
 import { collection, getDocs } from "firebase/firestore"
 import { useEffect, useState } from "react"
-import { db } from "../../firebase"
-import WhyChooseAdapter from "../WhyChooseAdapter/WhyChooseAdapter"
+import { db } from "../../../firebase"
+import WhyChooseAdapter from "../../WhyChooseAdapter/WhyChooseAdapter"
 
 const WhyChoose = () => {
     const [whyChoose, setwhyChoose] = useState<Array<{text:string,refid:string}>>([])

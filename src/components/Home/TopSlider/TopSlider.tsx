@@ -1,7 +1,7 @@
 import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from "firebase/firestore"
 import { useEffect, useState } from "react"
-import { db, storage } from "../../firebase"
-import ImageAdapter from "../ImageAdapter/ImageAdapter"
+import { db, storage } from "../../../firebase"
+import ImageAdapter from "../../ImageAdapter/ImageAdapter"
 import { ToastContainer, toast } from "react-toastify"
 import { deleteObject, getDownloadURL, ref, uploadBytes } from "firebase/storage"
 
