@@ -3,12 +3,39 @@ import { useForm } from 'react-hook-form'
 import Dashboard from '../components/Dashboard/Dashboard'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { configSchema } from '../validators/configValidator'
+import { doc, getDoc, updateDoc } from 'firebase/firestore'
+import { db } from '../firebase'
+import { useEffect } from 'react'
 
 const Config = () => {
-  const {register,handleSubmit,formState:{errors}} = useForm<ConfigType>({resolver: zodResolver(configSchema)})
-  const sendToFirestore = (data:ConfigType)=>{
-    console.log(data)
+  const {register,handleSubmit,setValue,clearErrors,formState:{errors}} = useForm<ConfigType>({resolver: zodResolver(configSchema)})
+  
+  const getPrevData = ()=>{
+    getDoc(doc(db, "Website", "Config")).then((snap)=>{
+        const tempData:ConfigType = snap.data() as ConfigType
+        setValue('email',tempData.email)
+        setValue('businessHour',tempData.businessHour)
+        setValue('address',tempData.address)
+        setValue('about',tempData.about)
+        setValue('phoneOne',tempData.phoneOne)
+        setValue('phoneTwo',tempData.phoneTwo)
+        setValue('facebook',tempData.facebook)
+        setValue('instagram',tempData.instagram)
+        setValue('twitter',tempData.twitter)
+        setValue('embedMap',tempData.embedMap)
+    })
   }
+  const sendToFirestore = (data:ConfigType)=>{
+    updateDoc(doc(db, "Website", "Config"),data).then(()=>{
+      clearErrors()
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
+  useEffect(() => {
+    getPrevData()
+  }, [])
+  
   return (
     <Dashboard>
       <form onSubmit={handleSubmit(sendToFirestore)}>
