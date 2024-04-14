@@ -13,15 +13,15 @@ const Menu = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/meet-the-team">Meet The Team</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/history">History</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/profile">Company Profile</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/services">Our Services</Link>
       </li>

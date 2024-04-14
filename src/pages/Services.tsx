@@ -40,11 +40,13 @@ const Services = () => {
     })
   }
 
-  const createAbout = (title:string,text:string,setloading:Function)=>{
+  const createAbout = (title:string,text:string,setloading:Function,setTitle:Function,setText:Function)=>{
     setloading(true)
     addDoc(collection(db,"Website/ServicePage/Contents"),{title,text}).then(()=>{
       getAbouts()
       setloading(false)
+      setTitle('')
+      setText('')
     }).catch((err)=>{
       console.log(err)
       setloading(false)

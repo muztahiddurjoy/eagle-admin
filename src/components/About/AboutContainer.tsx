@@ -23,8 +23,8 @@ const AboutContainer = ({text,title,newAdapter,onDelete,onUpdate,onCreate,refid}
         <textarea value={textState} onChange={(e)=>settextState(e.target.value)} className="input input-bordered mt-1 w-full min-h-[200px]"></textarea>
         <div className="flex justify-end mt-3">
             {(!newAdapter&&onDelete)&&<button className="btn btn-error text-white btn-sm mr-1" onClick={()=> onDelete(refid)}>Delete</button>}
-            {(!newAdapter&&onUpdate)&&<button className="btn btn-primary btn-sm" disabled={loading} onClick={()=> onUpdate(refid,titleState,textState,setloading)}>{loading&&<span className="loading loading-infinity loading-sm mr-1"></span>} Update</button>}
-            {(newAdapter&&onCreate)&&<button className="btn btn-primary btn-sm" onClick={()=>onCreate(titleState,textState,setloading)} disabled={loading}>{loading&&<span className="loading loading-infinity loading-sm mr-1"></span>}Create</button>}
+            {(!newAdapter&&onUpdate)&&<button className="btn btn-primary btn-sm" disabled={loading || title==titleState} onClick={()=> onUpdate(refid,titleState,textState,setloading)}>{loading&&<span className="loading loading-infinity loading-sm mr-1"></span>} Update</button>}
+            {(newAdapter&&onCreate)&&<button className="btn btn-primary btn-sm" onClick={()=>onCreate(titleState,textState,setloading,settitleState,settextState)} disabled={loading}>{loading&&<span className="loading loading-infinity loading-sm mr-1"></span>}Create</button>}
         </div>
     </div>
   )

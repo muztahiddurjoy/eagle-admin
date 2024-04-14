@@ -1,7 +1,18 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Menu from "../Menu/Menu"
+import { onAuthStateChanged } from "firebase/auth"
+import { auth } from "../../firebase"
+import { useNavigate } from "react-router-dom"
 
 const Dashboard = ({children}:React.PropsWithChildren) => {
+  const router = useNavigate()
+  useEffect(()=>{
+    onAuthStateChanged(auth,(user)=>{
+      if(!user){
+        router("/login")
+      }
+    })
+  },[])
   return (
     <div>
         <div className="drawer lg:drawer-open">

@@ -14,6 +14,22 @@ const History = () => {
             settext(snap.data()!.text)
         })
     }
+    const updateContent = ()=>{
+        updateDoc(doc(db,"Website/Homepage/History/yKyNiwLHG6pjkx7KA1OR"),{
+            text
+        }).then(()=>{
+            getHistory()
+            // toast.success("Content Updated Successfully",{
+            //     position: "bottom-right",
+            //     autoClose: 5000,
+            //     hideProgressBar: false,
+            //     closeOnClick: true,
+            //     pauseOnHover: true,
+            //     draggable: true,
+            //     progress: undefined,
+            // })
+        })
+    }
     useEffect(() => {
         getHistory()
     },[])
@@ -65,6 +81,9 @@ const History = () => {
             </div>
             <div className="flex-1">
                 <textarea value={text} onChange={e=> settext(e.target.value)} className="textarea textarea-bordered w-full min-h-[200px]"></textarea>
+                <div className="flex justify-end mt-3">
+                    <button className="btn btn-sm btn-primary" disabled={text==history.text} onClick={updateContent}>Update</button>
+                </div>
             </div>
         </div>
         <ToastContainer/>
